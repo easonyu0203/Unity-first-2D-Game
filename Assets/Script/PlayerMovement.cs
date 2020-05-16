@@ -7,11 +7,11 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     public Animator animator;
+    public PlayerCombat playerCombat;
 
     float horizontalMove = 0f;
     public float runSpeed = 40f;
-    bool jump = false;
-    bool combatMode = false;
+    public bool jump = false;
 
     // Update is called once per frame
     void Update() { 
@@ -24,17 +24,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", true);
             jump = true;
         }
-        if (Input.GetButtonDown("Down"))
-        {
-                animator.SetBool("CombatMode", true);
-            combatMode = true;
-        }
-        if (Input.GetButtonUp("Down"))
-        {
-            animator.SetBool("CombatMode", false);
-            combatMode = false;
-        }
-        if (combatMode)
+        if (playerCombat.combatMode)
         {
             jump = false;
             horizontalMove = 0f;

@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{3DA911AF-D7FA-7B6A-E0E0-3287EA36D0C0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LightPlayerCombat.cs">
+    <Files>
+      <File FileName="Assets/Script/PlayerCombat.cs" Line="13" Column="34" />
+      <File FileName="Assets/Bandits - Pixel Art/Demo/Bandit.cs" />
+      <File FileName="Assets/Script/PlayerMovement.cs" Line="7" Column="1" />
+      <File FileName="Assets/LightPlayerMovement.cs" Line="5" Column="33" />
+      <File FileName="Assets/LightPlayerCombat.cs" Line="79" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Unity-first-2D-Game" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Bandits - Pixel Art" expanded="True">
+                <Node name="Demo" expanded="True" />
+              </Node>
+              <Node name="Script" expanded="True" />
+              <Node name="LightPlayerCombat.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity-first-2D-Game" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4154be81-02e5-4e1c-a086-65f222c5c7d5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
