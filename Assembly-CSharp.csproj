@@ -66,11 +66,20 @@
     <Compile Include="Assets\Bandits - Pixel Art\Demo\Bandit.cs" />
     <Compile Include="Assets\Bandits - Pixel Art\Demo\CharacterSelector_Bandit.cs" />
     <Compile Include="Assets\Bandits - Pixel Art\Demo\Sensor_Bandit.cs" />
-    <Compile Include="Assets\LightPlayerCombat.cs" />
-    <Compile Include="Assets\LightPlayerMovement.cs" />
+    <Compile Include="Assets\disableCam.cs" />
+    <Compile Include="Assets\PlayerSetUp.cs" />
     <Compile Include="Assets\Script\CharacterController2D.cs" />
+    <Compile Include="Assets\Script\Controller2D.cs" />
+    <Compile Include="Assets\Script\LightCharaterController2D.cs" />
+    <Compile Include="Assets\Script\LightPlayerCombat.cs" />
+    <Compile Include="Assets\Script\LightPlayerMovement.cs" />
     <Compile Include="Assets\Script\PlayerCombat.cs" />
+    <Compile Include="Assets\Script\PlayerComBattle.cs" />
+    <Compile Include="Assets\Script\PlayerMove.cs" />
     <Compile Include="Assets\Script\PlayerMovement.cs" />
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/eason/Desktop/unity/Unity-first-2D-Game/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/eason/Desktop/unity/Unity-first-2D-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -79,6 +88,9 @@
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>/Users/eason/Desktop/unity/Unity-first-2D-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/eason/Desktop/unity/Unity-first-2D-Game/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/eason/Desktop/unity/Unity-first-2D-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

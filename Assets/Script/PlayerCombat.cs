@@ -64,13 +64,16 @@ public class PlayerCombat : MonoBehaviour
 
         //Damage them
         foreach(Collider2D enemy in hitEnemies)
-        { 
+        {
+            Debug.Log("enemy name:" + enemy.name);
+            GetComponent<PlayerCombat>().TakeDamage(power);
             Debug.Log("We hit " + enemy.name);
         }
     }
 
     public  void TakeDamage(int damage)
     {
+        Debug.Log("Heavy take damage, current hearth: " + currentHeath);
         animator.SetTrigger("Hurt");
         currentHeath -= (power - defense);
     }
