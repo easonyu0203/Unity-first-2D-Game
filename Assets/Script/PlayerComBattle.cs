@@ -15,7 +15,7 @@ public class PlayerComBattle : NetworkBehaviour
     public LayerMask enemyLayer;
     int maxHealth = 100;
     public int power = 30;
-    public float attackRate = 2f;
+    public float attackRate = 3f;
     float nextAttackTime = -1f;
     public float freeTime = -1f;
     public float contrainTime = 0.3f;
@@ -61,7 +61,11 @@ public class PlayerComBattle : NetworkBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                CmdSeverAttack();
+                if (nextAttackTime <= Time.time)
+                {
+                    nextAttackTime = Time.time + 1 / attackRate;
+                    CmdSeverAttack();
+                }
             }
         }
             animator.SetBool("combat", combatMode);
@@ -108,9 +112,6 @@ public class PlayerComBattle : NetworkBehaviour
     [Command]
     void CmdSeverAttack()
     {
-        if(nextAttackTime <= Time.time)
-        {
-            nextAttackTime = Time.time + 1 / attackRate;
             RpcgiveAttack();
             Collider2D[] hitEnemys = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayer);
             foreach (Collider2D enemy in hitEnemys)
@@ -119,7 +120,6 @@ public class PlayerComBattle : NetworkBehaviour
 
                 enemy.GetComponent<PlayerComBattle>().RpcGiveTakeDamage();
             }
-        }
     }
     [ClientRpc]
     void RpcgiveAttack()

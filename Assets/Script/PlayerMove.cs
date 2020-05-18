@@ -9,6 +9,7 @@ public class PlayerMove : NetworkBehaviour
     public Controller2D controller2D;
     public Animator animator;
     public PlayerComBattle playerComBattle;
+    public Rigidbody2D rigid;
 
     public float runSpeed = 40f;
 
@@ -36,6 +37,7 @@ public class PlayerMove : NetworkBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
+                Debug.Log("jump");
                 jump = true;
                 CmdsetTJump();
                 animator.SetBool("jump", true);
@@ -48,7 +50,7 @@ public class PlayerMove : NetworkBehaviour
 
     public void OnLand()
     {
-
+        Debug.Log("on grand");
         CmdsetFJump();
         animator.SetBool("jump", false);
     }
