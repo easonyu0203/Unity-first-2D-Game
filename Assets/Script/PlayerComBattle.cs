@@ -8,8 +8,9 @@ public class PlayerComBattle : NetworkBehaviour
     public Animator animator;
     public PlayerMove playerMove;
     public Transform AttackPoint;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D rigid;
     public Controller2D controller2D;
+    public healthBar healthbar;
 
     public float attackRange = 0.1f;
     public LayerMask enemyLayer;
@@ -22,7 +23,7 @@ public class PlayerComBattle : NetworkBehaviour
 
     public bool combatMode = false;
 
-    public int currentHealth;
+    public int currentHealth = 100;
 
     [SerializeField]
     Behaviour[] Die_CompoentsDisable;
@@ -31,12 +32,16 @@ public class PlayerComBattle : NetworkBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthbar.SetMaxHealth(maxHealth);
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthbar.SetHealth(currentHealth);
+
         if (isLocalPlayer)
         {
             if(Time.time >= freeTime)
@@ -165,7 +170,7 @@ public class PlayerComBattle : NetworkBehaviour
     void RpcTellDie()
     {
         animator.SetBool("Die", true);
-        rigidbody2D.gravityScale = 0;
+        rigid.gravityScale = 0;
         for (int i = 0; i < Die_CompoentsDisable.Length; i++)
         {
             Die_CompoentsDisable[i].enabled = false;
